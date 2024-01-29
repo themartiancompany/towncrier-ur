@@ -1,4 +1,8 @@
+# SPDX-License-Identifier: AGPL-3.0
+#
 # Maintainer: Felix Yan <felixonmars@archlinux.org>
+# Maintainer: Truocolo <truocolo@aol.com>
+# Maintainer: Pellegrino Prevete (tallero) <pellegrinoprevete@gmail.com>
 
 pkgname=towncrier
 pkgver=22.12.0
@@ -26,9 +30,17 @@ check() {
 
 package() {
   cd towncrier-$pkgver
-  python setup.py install -O1 --prefix=/usr --root="$pkgdir"
-
-  install -Dm644 LICENSE -t "$pkgdir"/usr/share/licenses/$pkgname/
+  python \
+    setup.py \
+      install \
+        -O1 \
+        --prefix=/usr \
+        --root="${pkgdir}"
+  install \
+    -Dm644 \
+    LICENSE \
+    -t \
+      "$pkgdir"/usr/share/licenses/$pkgname/
 }
 
-# vim:set ts=2 sw=2 et:
+# vim:set sw=2 sts=-1 et:

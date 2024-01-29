@@ -1,0 +1,19 @@
+pkgbase = towncrier
+	pkgdesc = Utility to produce useful, summarised news files for your project
+	pkgver = 22.12.0
+	pkgrel = 3
+	url = https://github.com/hawkowl/towncrier
+	arch = any
+	license = MIT
+	checkdepends = git
+	checkdepends = python-twisted
+	depends = python-click
+	depends = python-click-default-group
+	depends = python-incremental
+	depends = python-jinja
+	depends = python-setuptools
+	depends = python-tomli
+	source = https://pypi.io/packages/source/t/towncrier/towncrier-22.12.0.tar.gz
+	sha512sums = af602610ddf77ad2d241347bd59ac915637123b65aa9da41197674ea338f8d7c86d1faa59e58e8675286c44ea266915896041bf6e16c3e920e40ca85cf04e52d
+
+pkgname = towncrier

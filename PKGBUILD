@@ -16,7 +16,7 @@ _pynextver="${_pymajver%.*}.$(( \
   ${_pyminver} + 1))"
 _pkg=towncrier
 pkgname="${_py}-${_pkg}"
-pkgver=22.12.0
+pkgver=24.8.0
 pkgrel=3
 _pkgdesc=(
   "Utility to produce useful,"
@@ -58,7 +58,7 @@ source=(
   "${_pypi}/${_pkg::1}/${_pkg}/${_pkg}-${pkgver}.tar.gz"
 )
 sha512sums=(
-  'af602610ddf77ad2d241347bd59ac915637123b65aa9da41197674ea338f8d7c86d1faa59e58e8675286c44ea266915896041bf6e16c3e920e40ca85cf04e52d'
+  'b01998230936e920a5ad0b4c18f73686ea557fc47f6346fed4c7b3aabec6bceb5b822fa951cd7dec4e1dcd3d6f8e9a6cccebb1aa6ca3f7f56557c8d31c3be5bd'
 )
 
 build() {

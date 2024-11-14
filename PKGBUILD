@@ -93,11 +93,16 @@ package() {
   cd \
     "${_pkg}-${pkgver}"
   "${_py}" \
-    setup.py \
-      install \
-        -O1 \
-        --root="${pkgdir}" \
-        --prefix=/usr
+    -m \
+      installer \
+    --destdir="${pkgdir}" \
+    dist/*.whl
+  # "${_py}" \
+  #   setup.py \
+  #     install \
+  #       -O1 \
+  #       --root="${pkgdir}" \
+  #       --prefix=/usr
   install \
     -Dm644 \
     LICENSE \

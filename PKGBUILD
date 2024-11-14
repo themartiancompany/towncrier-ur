@@ -42,6 +42,10 @@ depends=(
   "${_py}-setuptools"
   "${_py}-tomli"
 )
+makedepends=(
+  "${_py}-build"
+  "${_py}-installer"
+)
 checkdepends=(
   'git'
   "${_py}-twisted"
@@ -61,8 +65,14 @@ build() {
   cd \
     "${_pkg}-${pkgver}"
   "${_py}" \
-    setup.py \
-      build
+    -m \
+      build \
+    --wheel \
+    --no-isolation
+
+#   "${_py}" \
+#     setup.py \
+#       build
 }
 
 check() {

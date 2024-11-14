@@ -15,7 +15,7 @@ _pyminver="${_pymajver#*.}"
 _pynextver="${_pymajver%.*}.$(( \
   ${_pyminver} + 1))"
 _pkg=towncrier
-pkgname="${_py}-${_pkg}=${pkgver}"
+pkgname="${_py}-${_pkg}"
 pkgver=22.12.0
 pkgrel=3
 _pkgdesc=(
@@ -47,7 +47,7 @@ checkdepends=(
   "${_py}-twisted"
 )
 provides=(
-  "${_pkg}"
+  "${_pkg}=${pkgver}"
 )
 _pypi="https://pypi.io/packages/source"
 source=(
